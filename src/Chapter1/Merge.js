@@ -9,7 +9,6 @@ function Merge(
   j = 0,
   arrB = []
 ) {
-  if (left.length < i || right.length < j);
   for (let k = 0; k < n; k++) {
     //until the length of the total array.
     if (left[i] < right[j]) {
@@ -20,7 +19,7 @@ function Merge(
       arrB[k] = right[j];
       j = j + 1;
     } else {
-      arrB[k] = left[i]; // if
+      arrB[k] = left[i]; // if last element left === right index then arrB[k] = left[i]
     }
   }
   return arrB;
