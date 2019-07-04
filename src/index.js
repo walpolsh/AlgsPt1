@@ -6,16 +6,27 @@ import { DivideAndConquer } from "./Chapter3/index";
 import "./styles.css";
 let hare = 5;
 let tortoise = 11;
-let j = 0;
 function thing() {
   for (let j; j < 20; j++) {
     if (hare < tortoise) hare *= 2;
     else if (hare === tortoise) break;
     else tortoise += 1;
   }
-  console.log(hare, tortoise, hare + tortoise);
+  // console.log(hare, tortoise, hare + tortoise);
   return hare + tortoise;
 }
+function log(x) {
+  console.log(x);
+  return x;
+}
+function fibonacci(n) {
+  let arr = [0, 1];
+  for (let i = 2; i < n; i++) {
+    arr[i] = arr[i - 1] + arr[i - 2];
+  }
+  return arr;
+}
+console.log(fibonacci(9));
 thing();
 function App() {
   return (
